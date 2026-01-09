@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tamil Nadu Temple Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- SEO & Meta Tags -->
+  <meta name="description"
+    content="Explore the spiritual heritage of Tamil Nadu. specific guide to famous temples like Meenakshi Amman, Brihadeeswarar, Rameswaram, and more. rich history, culture, and architecture.">
+  <meta name="keywords" content="Tamil Nadu Temples,Kovil,movie,tamil movies,tamil,a,b,c,A,B,C,maths,results,gym,dance,sing,collage,google,mobile,phone,new,latest, Spiritual Tourism, South India Temples, Dravidian Architecture, Meenakshi Amman Madurai, Brihadeeswarar Thanjavur, Rameswaram Ramanathaswamy, Kanchipuram Silk and Temples, Hindu Pilgrimage, Indian Culture, Tamil Nadu Tourism,
+  Inside Tamil: தமிழ்நாடு கோவில்கள், ஆன்மீக சுற்றுலா, மதுரை மீனாட்சி அம்மன், தஞ்சை பெரிய கோவில், ராமேஸ்வரம்,
+  Hindi: तमिलनाडु मंदिर, दक्षिण भारत पर्यटन, मीनाक्षी मंदिर, रामेश्वरम,
+  Telugu: తమిళనాడు దేవాలయాలు, మధురై మీనాక్షి,
+  Kannada: ತಮಿಳುನಾಡು ದೇವಾಲಯಗಳು, ಮದುರೈ ಮೀನಾಕ್ಷಿ,
+  Malayalam: തമിഴ്നാട് ക്ഷേത്രങ്ങൾ, മധുര മീനാക്ഷി ക്ഷേത്രം">
+  <meta name="author" content="Venkateswaran">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://venkateswaran-temple-explorer.com/">
+  <meta property="og:title" content="Tamil Nadu Temple Explorer - Spiritual Journey">
+  <meta property="og:description"
+    content="Discover the magnificent temples of Tamil Nadu. A complete guide to history, architecture, and divine destinations.">
+  <meta property="og:image" content="https://venkateswaran-temple-explorer.com/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://venkateswaran-temple-explorer.com/">
+  <meta property="twitter:title" content="Tamil Nadu Temple Explorer - Spiritual Journey">
+  <meta property="twitter:description"
+    content="Discover the magnificent temples of Tamil Nadu. A complete guide to history, architecture, and divine destinations.">
+  <meta property="twitter:image" content="https://venkateswaran-temple-explorer.com/og-image.jpg">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <h1 id="mainTitle">🛕 Tamil Nadu Temple Explorer</h1>
+    <div class="controls">
+      <button id="btnLang" onclick="toggleLang()">தமிழ்</button>
+      <button id="btnDark" onclick="toggleDark()">🌙 Dark</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2 id="heroTitle">Explore Spiritual Tamil Nadu</h2>
+    <p id="heroSub">History • Culture • Devotion</p>
+  </section>
+
+  <!-- PLACES -->
+  <section class="places">
+    <h2 id="placesTitle">Famous Temple Cities</h2>
+    <input type="text" id="searchBar" onkeyup="filterPlaces()" placeholder="Search places...">
+
+    <div class="cards">
+      <div class="card" onclick="loadPlace('madurai')">
+        <img src="madhu1.jpg"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'">
+        <h3>Madurai</h3>
+        <p>Ancient city ruled by Pandyas, known for the majestic Meenakshi Amman Temple.</p>
+      </div>
+
+      <div class="card" onclick="loadPlace('kumbakonam')">
+        <img src="kum1.jpg"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'">
+        <h3>Kumbakonam</h3>
+        <p>The "Cambridge of South India," famous for its hundreds of temples and Mahamaham.</p>
+      </div>
+
+      <div class="card" onclick="loadPlace('mayiladuthurai')">
+        <img src="mayilai1.jpg"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'">
+        <h3>Mayiladuthurai</h3>
+        <p>Legend has it that Goddess Parvati worshipped Lord Shiva here in the form of a peacock.</p>
+      </div>
+
+      <div class="card" onclick="loadPlace('rameswaram')">
+        <img src="ram1.jpg"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'">
+        <h3>Rameswaram</h3>
+        <p>Holy island where Lord Rama built a bridge to Lanka; famous for its long corridors.</p>
+      </div>
+
+      <div class="card" onclick="loadPlace('chidambaram')">
+        <img src="sitha1.jpg"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'">
+        <h3>Chidambaram</h3>
+        <p>The center of the universe's cosmic dance, featuring the golden roofed Nataraja temple.</p>
+      </div>
+
+      <div class="card" onclick="loadPlace('thanjavur')">
+        <img src="thanjai1.jpg"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'">
+        <h3>Thanjavur</h3>
+        <p>Capital of the Great Cholas, home to the architectural marvel Big Temple (Brihadeeswarar).</p>
+      </div>
+
+      <div class="card" onclick="loadPlace('kanchipuram')">
+        <img src="kanchi1.jpg"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'">
+        <h3>Kanchipuram</h3>
+        <p>Former Pallava capital, known as the "City of Thousand Temples" and silk sarees.</p>
+      </div>
+
+      <div class="card" onclick="loadPlace('tiruvannamalai')">
+        <img src="aruna1.jpg"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'">
+        <h3>Tiruvannamalai</h3>
+        <p>Home to the sacred Arunachala hill facing the Agni Lingam, representing fire.</p>
+      </div>
+
+      <div class="card" onclick="loadPlace('palani')">
+        <img src="palani1.jpg"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'">
+        <h3>Palani</h3>
+        <p>Hilltop abode of Lord Murugan, famous for the Navapashanam idol and panchamirtham.</p>
+      </div>
+
+      <div class="card" onclick="loadPlace('srirangam')">
+        <img src="sri1.jpg"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'">
+        <h3>Srirangam</h3>
+        <p>The foremost Divya Desam, located on an island formed by rivers Cauvery and Kollidam.</p>
+      </div>
+
+      <div class="card" onclick="loadPlace('mahabalipuram')">
+        <img src="maha1.jpg"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'">
+        <h3>Mahabalipuram</h3>
+        <p>Pallava port city renowned for its rock-cut monuments and Shore Temple.</p>
+      </div>
+
+      <div class="card" onclick="loadPlace('kanyakumari')">
+        <img src="kumari1.jpg"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Not+Found'">
+        <h3>Kanyakumari</h3>
+        <p>The southern tip where three seas meet, dedicated to the virgin Goddess Kanyakumari.</p>
+      </div>
+
+
+
+
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section id="details" class="details hidden"></section>
+
+  <!-- FEEDBACK -->
+  <section class="feedback">
+    <h2>Visitor Feedback</h2>
+
+    <input id="fname" placeholder="Your Name (optional)">
+    <textarea id="fmsg" placeholder="Share your experience..."></textarea>
+
+    <div class="stars" onclick="rate(event)">
+      ⭐ ⭐ ⭐ ⭐ ⭐
+    </div>
+
+    <button id="btnSubmit" onclick="submitFeedback()">Submit Feedback</button>
+    <p id="thanks"></p>
+  </section>
+
+  <footer>
+    <span id="footerText">© 2025-Created by Venkateswaran</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
